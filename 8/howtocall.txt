@@ -1,0 +1,7 @@
+use "./program" to get hello world
+
+use "./program nathan" to get hello nathan
+
+use "./program empty" to get hello empty
+
+always use "./program" then space and follow up with the text you want
