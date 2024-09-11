@@ -1,0 +1,12 @@
+Classes and Objects: C++ supports object-oriented programming (OOP) through classes, which allow bundling data and methods that operate on the data, promoting modularity, and code reuse.
+
+Using the Keyword 'const': The const keyword allows defining variables whose values cannot be changed after initialization, making programs safer and easier to understand by preventing unintended modifications.
+
+Namespaces: Namespaces help organize code into logical groups and prevent name conflicts by differentiating similar names across different libraries or parts of a program.
+
+The Scope Resolution Operator ::: This operator is used to access members of a namespace or class, enabling explicit specification of which variable, function, or class is being referred to in cases of name conflicts.
+
+cout, cin, and cerr: These are C++ stream objects used for input and output operations; cout for standard output, cin for standard input, and cerr for error messages, providing a more type-safe and flexible I/O mechanism than printf and scanf in C.
+
+Templates: Templates allow creating generic functions and classes that work with any data type, providing a powerful way to write flexible and reusable code without sacrificing type safety.
+
