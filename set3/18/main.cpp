@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]) {
     if (argc == 1) {
-        std::cout << "Usage: " << argv[0] << " <argument-number> [args...]" << std::endl;
+        std::cout << "Usage: " << argv[0] << " <argument-number> [args...]" << "\n";
         return 0;
     }
 
