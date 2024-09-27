@@ -6,6 +6,6 @@ void boundCall(int argc, char *argv[]) {
     size_t argNumber = std::atoi(argv[1]);
     ReturnValues result = combine(argc, argv, argNumber);
 
-    std::cout << "Argument number (bound call): " << result.nr << ", Value: " << result.value << std::endl;
+    std::cout << "Argument number (bound call): " << result.nr << ", Value: " << result.value << "\n";
 }
 
