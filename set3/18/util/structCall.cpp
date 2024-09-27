@@ -1,18 +1,19 @@
 #include "util.ih"
 #include "../returnvalues/returnvalues.hh"
-#include <iostream>
 
-bool structCall(int argc, char *argv[]) {
-    size_t argNumber = std::stoi(argv[1]);
+bool structCall(size_t argc, char *argv[]) 
+{
+    size_t argNumber = stoul(argv[1]);
     ReturnValues result = combine(argc, argv, argNumber);
 
-    if (!result.ok) {
-        std::cout << "Argument " << argNumber << " does not exist." << "\n";
-        std::cout << "Usage: " << argv[0] << " <argument-number> [args...]" << "\n";
+    if (!result.ok) 
+    {
+        cout << "Argument " << argNumber << " does not exist." << "\n";
+        cout << "Usage: " << argv[0] << " <argument-number> [args...]" << "\n";
         return false;
     }
 
-    std::cout << "Argument number: " << result.nr << ", Value: " << result.value << "\n";
+    cout << "Argument number: " << result.nr << ", Value: " << result.value << "\n";
     return true;
 }
 
