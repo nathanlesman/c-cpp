@@ -1,13 +1,18 @@
 #include "returnvalues.ih"
 
-ReturnValues combine(int argc, char *argv[], size_t requestedArg) {
+ReturnValues combine(size_t argc, char *argv[], size_t requestedArg) 
+{
     ReturnValues result;
     result.nr = requestedArg;
 
-    if (requestedArg < argc) {
+    if (requestedArg < argc) 
+    {
         result.ok = true;
         result.value = argv[requestedArg];
-    } else {
+    }
+        
+    else 
+    {
         result.ok = false;
         result.value = "";
     }
