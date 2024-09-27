@@ -1,0 +1,295 @@
+1. define an int-type parameter? 
+It is appropriate to use an int-type parameter when the value you need to pass into the function is a whole number and no fractional or special formatting like strings is required. In the code example this is illustrated because the function TimesTwo takes an int parameter x and multiplies it by 2 and returns the result 
+
+--- your code example here ---
+#include <iostream>
+
+int TimesTwo(int x) {
+    return x * 2; 
+}
+
+int main() {
+    int value = 5;
+    std::cout << "5 multiplies by 2 is: " << TimesTwo(value) << "\n";
+    return 0;
+}
+
+2. define a std::string value parameter? 
+It is appropriate to use an std::string value parameter when you want to create a copy of the strinf, for example when the function needs to modify it or store a copy. In the code example this is illustrated because because the string is passed by the value and a copy is made withing the function 
+  
+--- your code example here --
+void appendExclamation(std::string s) {
+    s += "!";
+}
+
+int main() {
+    std::string greeting = "Hello";
+    appendExclamation(greeting);
+}
+
+
+3. define a const reference to an int-type parameter? 
+It is appropriate to define an const reference to an int-type parameter when you want to avoid copying but do not need to modify the argument. In the code example this is illustraded because the function reads the integer without modifying it
+
+--- your code example here --
+
+void printValue(const int& x) {
+    std::cout << x << std::endl;
+}
+
+int main() {
+    int num = 5;
+    printValue(num);
+}
+
+
+4. define a const reference to a std::string value parameter? 
+It is appropriate to use a std::string parameter when you want to avoid copying a large string but do not need to modify it. In the code example this is illustrated because the string is passed by reference to avoid copying it
+
+--- your code example here --
+
+void printLength(const std::string& s) {
+    std::cout << s.length() << std::endl;
+}
+
+int main() {
+    std::string greeting = "Hello, world!";
+    printLength(greeting);
+}
+
+
+5. define a non-const reference to an int-type parameter? 
+It is appropriate to define a non-const reference to an int-type parameter when you need to modify the argument inside the function. In the code example this is illustrated because the original value is modified through the reference
+
+--- your code example here --
+
+void increment(int& x) {
+    x++;
+}
+
+int main() {
+    int num = 5;
+    increment(num);
+    // num is now 6, because it was modified by reference
+}
+
+
+6. define a non-const reference to a std::string value parameter? 
+It is appropriate to define a non-const reference to a std::String parameter when the functino needs to modify the original string. In the code example this is illustrated because the original string is modified
+
+--- your code example here --
+
+void appendExclamation(std::string& s) {
+    s += "!";
+}
+
+int main() {
+    std::string greeting = "Hello";
+    appendExclamation(greeting);
+    // greeting is now "Hello!"
+}
+
+
+7. define a const rvalue-reference to an int-type parameter?
+It is appropriate to define a const rvalue to an int-type parameter when you need to bin to a temporary int without modifying it. In the code example this is illustrated because the temporary integer is read without modification
+
+--- your code example here --
+
+void printValue(const int&& x) {
+    std::cout << x << std::endl;
+}
+
+int main() {
+    printValue(10);  // Binds to a temporary value
+}
+
+
+8. define a const rvalue-reference to a std::string parameter?
+It is appropriate to define a const rvalue-reference to a std::String parameter when you need to bind to a temporary string without modifying it. In the code example this is illustrated because the temporary string is read without modification
+ 
+--- your code example here --
+
+void printLength(const std::string&& s) {
+    std::cout << s.length() << std::endl;
+}
+
+int main() {
+    printLength("Temporary string");
+}
+
+
+9. define an rvalue-reference to an int-type parameter?
+It is appropriate to define an rvalue-reference to an int-type parameter when you need to modify or move from a temporary integer. In the code example this is illustrated because the temporary integer is modified
+
+--- your code example here --
+
+void doubleValue(int&& x) {
+    x *= 2;
+}
+
+int main() {
+    doubleValue(10);  // 10 is doubled, but we don't need it anymore
+}
+
+
+10. define an rvalue-reference to a std::string parameter?
+It is appropriate to define an rvalue-reference to a std::String parameter when you need to move from a temporary strinf, avoiding a copy. In the code example this is illustrated because the temporary string is moved 
+
+--- your code example here --    
+
+void setString(std::string&& s) {
+    std::string myString = std::move(s);
+}
+
+int main() {
+    setString("Temporary string");
+}
+
+
+11. return an int-type value?
+It is appropriate to return an int-type value when you need to return a copy of an integer and don't mind the cost of copying a small built-in type. In the code example this is illustrated because the integer is returned by value 
+
+--- your code example here --
+
+int getValue() {
+    return 42;
+}
+
+int main() {
+    int result = getValue();
+}
+
+
+12. return a std::string value?
+It is appropriate to return a std::string value when you want to return a copy of the string, for example when returning a newly created string. In the code example this is illustrated because a new strinf is created and returned
+
+--- your code example here --
+
+std::string createGreeting() {
+    return "Hello, world!";
+}
+
+int main() {
+    std::string greeting = createGreeting();
+}
+
+
+13. return a const reference to an int?
+It is appropriate to return a const reference to an int when you want to return a reference to an existing integer without allowing it to be modified. In the code example this is illustrated because the reference ensures the integer is not copied or modified
+
+--- your code example here --
+
+const int& getReference(const int& x) {
+    return x;
+}
+
+int main() {
+    int value = 42;
+    const int& ref = getReference(value);
+}
+
+
+14. return a const reference to a std::string?
+It is appropriate to return a const reference to a std::strinf when you want to return a reference to an existing string without copying it. In the code example this is illustrated because the string is not copied
+
+--- your code example here --
+
+const std::string& getGreeting(const std::string& greeting) {
+    return greeting;
+}
+
+int main() {
+    std::string hello = "Hello";
+    const std::string& ref = getGreeting(hello);
+}
+
+
+15. return a non-const reference to an int? 
+It is appropriate to return a non-const reference to an int when you want the caller to modify the original integer. In the code example this is illustrated because the original integer can be changed
+
+--- your code example here --
+
+int& getReference(int& x) {
+    return x;
+}
+
+int main() {
+    int value = 42;
+    int& ref = getReference(value);
+    ref = 100;  // Modifies the original value
+}
+
+
+16. return a non-const reference to a std::string?
+It is appropriate to return a non-const reference to a std::string when you want the caller to modify the original string. In the code example this is illustrated because the caller can modify the original string
+
+--- your code example here --
+
+std::string& getReference(std::string& s) {
+    return s;
+}
+
+int main() {
+    std::string greeting = "Hello";
+    std::string& ref = getReference(greeting);
+    ref += ", world!";  // Modifies the original string
+}
+
+
+17. return a const rvalue-reference to an int? 
+It is appropriate to return a const rvalue-reference to an int when you wnat to return a reference to a temporary integer without allowing modification. In the code example this is illustrated because a temporary value is returned and cannot be modified
+
+--- your code example here --
+
+const int&& getTemporaryValue() {
+    return 42;
+}
+
+int main() {
+    const int&& value = getTemporaryValue();
+    // value is bound to the temporary 42, but cannot be modified
+}
+
+
+18. return a const rvalue-reference to a std::string? 
+It is appropriate to return a const rvalue-reference to a std::String when you want to return a reference to a temporary string without allowing modification. In the code example this is illustrated because the temporary string is returned without being modifiable
+
+--- your code example here --
+
+const std::string&& getTemporaryString() {
+    return "Temporary";
+}
+
+int main() {
+    const std::string&& tempStr = getTemporaryString();
+}
+
+19. return an rvalue-reference to an int?
+It is appropriate to return an rvalue-reference to an int when you want to return a reference to a temporary integer, allowing it to be moved or modified. In the code example this is illustrated becausethe temporary value can be modified
+
+--- your code example here --
+
+int&& getTemporaryValue() {
+    return 42;
+}
+
+int main() {
+    int&& value = getTemporaryValue();
+    value = 100;  // Temporary integer is modified
+}
+
+
+20. return an rvalue-reference to a std::string?
+It is appropriate to return an rvalue-reference to a std::String when you want to return a temporary string that can be moved or modified by the caller. In the code example this is illustrated because the temporary strinf is moved and modified
+
+--- your code example here -
+
+std::string&& getTemporaryString() {
+    return "Temporary";
+}
+
+int main() {
+    std::string&& tempStr = getTemporaryString();
+    tempStr += " String";  // Temporary string is modified
+}
+-
