@@ -1,0 +1,61 @@
+In file included from util/util.ih:1,
+                 from util/boundCall.cpp:1:
+util/util.hh:4:17: error: ‘size_t’ was not declared in this scope
+    4 | bool structCall(size_t argc, char *argv[]);
+      |                 ^~~~~~
+util/util.hh:1:1: note: ‘size_t’ is defined in header ‘<cstddef>’; this is probably fixable by adding ‘#include <cstddef>’
+  +++ |+#include <cstddef>
+bash-5.2$ g++ -o main returnvalues/combine.cpp util/boundCall.cpp structCall.cpp main.cpp  
+In file included from util/util.ih:1,
+                 from util/boundCall.cpp:1:
+util/util.hh:4:17: error: ‘size_t’ was not declared in this scope
+    4 | bool structCall(size_t argc, char *argv[]);
+      |                 ^~~~~~
+util/util.hh:1:1: note: ‘size_t’ is defined in header ‘<cstddef>’; this is probably fixable by adding ‘#include <cstddef>’
+  +++ |+#include <cstddef>
+    1 | #ifndef UTIL_HH
+util/util.hh:4:30: error: expected primary-expression before ‘char’
+    4 | bool structCall(size_t argc, char *argv[]);
+      |                              ^~~~
+util/util.hh:4:42: error: expression list treated as compound expression in initializer [-fpermissive]
+    4 | bool structCall(size_t argc, char *argv[]);
+      |                                          ^
+util/util.hh:5:6: error: variable or field ‘boundCall’ declared void
+    5 | void boundCall(size_t argc, char *argv[]);
+      |      ^~~~~~~~~
+util/util.hh:5:16: error: ‘size_t’ was not declared in this scope
+    5 | void boundCall(size_t argc, char *argv[]);
+      |                ^~~~~~
+util/util.hh:5:16: note: ‘size_t’ is defined in header ‘<cstddef>’; this is probably fixable by adding ‘#include <cstddef>’
+util/util.hh:5:29: error: expected primary-expression before ‘char’
+    5 | void boundCall(size_t argc, char *argv[]);
+      |                             ^~~~
+util/boundCall.cpp: In function ‘void boundCall(size_t, char**)’:
+util/boundCall.cpp:6:24: error: ‘stoul’ was not declared in this scope; did you mean ‘std::__cxx11::stoul’?
+    6 |     size_t argNumber = stoul(argv[1]);
+      |                        ^~~~~
+      |                        std::__cxx11::stoul
+In file included from /usr/include/c++/14/string:54,
+                 from /usr/include/c++/14/bits/locale_classes.h:40,
+                 from /usr/include/c++/14/bits/ios_base.h:41,
+                 from /usr/include/c++/14/ios:44,
+                 from /usr/include/c++/14/ostream:40,
+                 from /usr/include/c++/14/iostream:41,
+                 from util/util.ih:3:
+/usr/include/c++/14/bits/basic_string.h:4442:3: note: ‘std::__cxx11::stoul’ declared here
+ 4442 |   stoul(const wstring& __str, size_t* __idx = 0, int __base = 10)
+      |   ^~~~~
+util/boundCall.cpp:9:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    9 |     cout << "Argument number (bound call): " << result.nr << ", Value: " << result.value << "\n";
+      |     ^~~~
+      |     std::cout
+/usr/include/c++/14/iostream:63:18: note: ‘std::cout’ declared here
+   63 |   extern ostream cout;          ///< Linked to standard output
+      |                  ^~~~
+cc1plus: fatal error: structCall.cpp: No such file or directory
+compilation terminated.
+In file included from main.cpp:1:
+main.ih:3:10: fatal error: ../returnvalues/returnvalues.hh: No such file or directory
+    3 | #include "../returnvalues/returnvalues.hh"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
