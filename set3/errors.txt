@@ -59,3 +59,22 @@ main.ih:3:10: fatal error: ../returnvalues/returnvalues.hh: No such file or dire
     3 | #include "../returnvalues/returnvalues.hh"
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
+
+ULA:
+returnvalues/combine.cpp:3:1: error: ‘ReturnValues’ does not name a type
+    3 | ReturnValues combine(int argc, char *argv[], size_t requestedArg) {
+      | ^~~~~~~~~~~~
+util/boundCall.cpp: In function ‘void boundCall(int, char**)’:
+util/boundCall.cpp:7:5: error: ‘ReturnValues’ was not declared in this scope
+    7 |     ReturnValues result = combine(argc, argv, argNumber);
+      |     ^~~~~~~~~~~~
+util/boundCall.cpp:9:54: error: ‘result’ was not declared in this scope
+    9 |     std::cout << "Argument number (bound call): " << result.nr << ", Value: " << result.value << std::endl;
+      |                                                      ^~~~~~
+util/boundCall.cpp:6:12: error: unused variable ‘argNumber’ [-Werror=unused-variable]
+    6 |     size_t argNumber = std::atoi(argv[1]);
+      |            ^~~~~~~~~
+cc1plus: all warnings being treated as errors
+cc1plus: fatal error: structCall.cpp: No such file or directory
+compilation terminated.
+
