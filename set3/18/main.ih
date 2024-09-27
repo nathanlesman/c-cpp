@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
 #include "../returnvalues/returnvalues.hh"
 #include "../util/util.hh"
 
+using namespace std;
