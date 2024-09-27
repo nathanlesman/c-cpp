@@ -1,4 +1,0 @@
-source file: 71 bytes
-object file: 1904 bytes
-executable program(stripped) : 15 272 bytes
-file iostream: 3074 bytes
