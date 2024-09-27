@@ -1,16 +1,16 @@
-#include "returnvalues/returnvalues.hh"
-#include "util/util.hh"
-#include <iostream>
-#include <cstdlib>
+#include "main.ih"
 
-int main(int argc, char *argv[]) {
-    if (argc == 1) {
-        std::cout << "Usage: " << argv[0] << " <argument-number> [args...]" << "\n";
+int main(int argc, char *argv[]) 
+{
+    if (argc == 1) 
+    {
+        cout << "Usage: " << argv[0] << " <argument-number> [args...]\n";
         return 0;
     }
 
     // Call structCall to check argument
-    if (!structCall(argc, argv)) {
+    if (!structCall(argc, argv)) 
+    {
         return 1;
     }
 
