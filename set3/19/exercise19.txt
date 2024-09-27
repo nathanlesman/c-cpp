@@ -1,0 +1,113 @@
+1. define an int-type parameter? 
+It is appropriate to use an int-type parameter when the value you need to pass into the function is a whole number and no fractional or special formatting like strings is required. In the code example this is illustrated because the function TimesTwo takes an int parameter x and multiplies it by 2 and returns the result 
+
+--- your code example here ---
+#include <iostream>
+
+int TimesTwo(int x) {
+    return x * 2; 
+}
+
+int main() {
+    int value = 5;
+    std::cout << "5 multiplies by 2 is: " << TimesTwo(value) << "\n";
+    return 0;
+}
+
+-------------------------- define a std::string value parameter? -----------------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+  
+--- your code example here --
+
+----------------------- define a const reference to an int-type parameter? -------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+----------------- define a const reference to a std::string value parameter? -----------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+
+--- your code example here --
+
+------------------- define a non-const reference to an int-type parameter? -------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+---------------- define a non-const reference to a std::string value parameter? --------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+----------------- define a const rvalue-reference to an int-type parameter? ------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+---------------- define a const rvalue-reference to a std::string parameter? -----------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+ 
+--- your code example here --
+ 
+-------------------------------- define an rvalue-reference to an int-type parameter? --------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+-------------------------- define an rvalue-reference to a std::string parameter? ------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --    
+
+----------------------------------- return an int-type value? --------------------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+--------------------------------- return a std::string value? --------------------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+--------------------------- return a const reference to an int? ------------------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+----------------------------- return a const reference to a std::string? ---------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+--------------------------- return a non-const reference to an int? --------------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+--------------------------- return a non-const reference to a std::string? -------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+------------------------------ return a const rvalue-reference to an int? --------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+------------------- return a const rvalue-reference to a std::string? ------------------------------
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
+
+- return an rvalue-reference to an int?
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+
+--- your code example here --
+
+
+---------------------------- return an rvalue-reference to a std::string? -------------------------- 
+It is appropriate to use an int-type parameter when ... (your description here). In the code example     this is illustrated because ... (your explanation here)
+
+--- your code example here --
