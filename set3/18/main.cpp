@@ -7,8 +7,6 @@ int main(int argc, char *argv[])
         cout << "Usage: " << argv[0] << " <argument-number> [arguments...]\n"; //guide the user on the correct way to run the program with required arguments
         return 1;
     }
-
-
     
     // Call structCall to check argument
     if (!structCall(argc, argv)) 
