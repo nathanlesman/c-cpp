@@ -3,7 +3,7 @@
 #include <iostream>
 
 bool structCall(int argc, char *argv[]) {
-    size_t argNumber = std::atoi(argv[1]);
+    size_t argNumber = std::stoul(argv[1]);
     ReturnValues result = combine(argc, argv, argNumber);
 
     if (!result.ok) {
