@@ -10,9 +10,7 @@ int main(int argc, char *argv[])
 
     // Call structCall to check argument
     if (!structCall(argc, argv)) 
-    {
         return 1;
-    }
 
     // Call boundCall for further processing
     boundCall(argc, argv);
