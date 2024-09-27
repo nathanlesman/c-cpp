@@ -219,4 +219,6 @@ int main() {
     ref = 100;  // Modifies the original value
 }
 
+16. 
 
+it is appropriate when you want to allow the caller of the function to modify the underlying string. similair to returining a non const reference to any other type this technique is useful when you want to provide direct acces to modify the internal or stored string.
