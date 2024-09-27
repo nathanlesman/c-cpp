@@ -16,6 +16,5 @@ int main(int argc, char *argv[])
 
     // Call boundCall for further processing
     boundCall(argc, argv);
-    return 0;
 }
 
