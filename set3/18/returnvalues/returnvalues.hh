@@ -10,7 +10,7 @@ struct ReturnValues
     std::string value;
 };
 
-ReturnValues combine(int argc, char *argv[], size_t requestedArg);
+ReturnValues combine(size_t argc, char *argv[], size_t requestedArg);
 
 #endif
 
