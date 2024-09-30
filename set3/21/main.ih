@@ -1,0 +1,9 @@
+#ifndef FINDCASE_HH
+#define FINDCASE_HH
+
+#include <string>
+using namespace std;
+
+size_t findcase(std::string const &str, std::string const &target, size_t offset = 0);
+
+#endif // FINDCASE_HH
