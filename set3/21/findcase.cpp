@@ -12,7 +12,7 @@ size_t findcase(string const &str, string const &target, size_t offset)
     char const *cStr = &str.front();
     char const *cTar = &target.front();
 
-    // start from the location of the offset,when idx is valid, move the pointerforward
+    // start from the location of the offset,when idx is valid, move the pointer forward
     //on the string, try to match the target
     for (size_t idx = offset; idx <= str.length() -target.length(); idx ++)
     {
