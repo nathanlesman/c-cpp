@@ -1,0 +1,77 @@
+1. for the optimized version,
+from 33 to 37, the computing time range is from 0.294 to 1.884,
+from 37 to 41, the computing time range is from 1.884 to 12.833.
+It does show a dramatic increase after 37.
+
+
+(base) cassielu@RN-145-90-133-156 22 % time ./program 33
+Fibonacci number: 3524578
+Golden ratio: 1.61803
+./program 33  0.28s user 0.01s system 99% cpu 0.294 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 34
+Fibonacci number: 5702887
+Golden ratio: 1.61803
+./program 34  0.45s user 0.01s system 99% cpu 0.463 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 35
+Fibonacci number: 9227465
+Golden ratio: 1.61803
+./program 35  0.72s user 0.01s system 99% cpu 0.738 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 36
+Fibonacci number: 14930352
+Golden ratio: 1.61803
+./program 36  1.16s user 0.01s system 99% cpu 1.174 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 37 
+Fibonacci number: 24157817
+Golden ratio: 1.61803
+./program 37  1.87s user 0.01s system 99% cpu 1.884 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 38 
+Fibonacci number: 39088169
+Golden ratio: 1.61803
+./program 38  3.01s user 0.02s system 99% cpu 3.036 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 39
+Fibonacci number: 63245986
+Golden ratio: 1.61803
+./program 39  4.87s user 0.02s system 99% cpu 4.897 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 40
+Fibonacci number: 102334155
+Golden ratio: 1.61803
+./program 40  7.87s user 0.03s system 99% cpu 7.913 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 41
+Fibonacci number: 165580141
+Golden ratio: 1.61803
+./program 41  12.75s user 0.08s system 99% cpu 12.833 total
+
+2. for the non-optimized version,
+from 33 to 37, the computing time range is from 0.037 to 0.163,
+from 37 to 41, the computing time range is from 0.163 to 1.025.
+It also shows a dramatic increase after 37.
+
+(base) cassielu@RN-145-90-133-156 22 % time ./program 33 x
+Fibonacci number: 3524578
+./program 33 x  0.03s user 0.00s system 92% cpu 0.037 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 34 x
+Fibonacci number: 5702887
+./program 34 x  0.05s user 0.00s system 95% cpu 0.051 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 35 x
+Fibonacci number: 9227465
+./program 35 x  0.07s user 0.00s system 97% cpu 0.072 total
+(base) cassielu@RN-145-90-133-156 22 % ./program 36 x
+Fibonacci number: 14930352
+(base) cassielu@RN-145-90-133-156 22 % time ./program 36 x
+Fibonacci number: 14930352
+./program 36 x  0.10s user 0.01s system 97% cpu 0.111 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 37 x
+Fibonacci number: 24157817
+./program 37 x  0.16s user 0.01s system 99% cpu 0.163 total
+(base) cassielu@RN-145-90-133-156 22 %  time ./program 38 x 
+Fibonacci number: 39088169
+./program 38 x  0.25s user 0.01s system 99% cpu 0.256 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 39 x
+Fibonacci number: 63245986
+./program 39 x  0.39s user 0.01s system 99% cpu 0.401 total
+(base) cassielu@RN-145-90-133-156 22 % time ./program 40 x
+Fibonacci number: 102334155
+./program 40 x  0.63s user 0.01s system 99% cpu 0.638 total
+(base) cassielu@RN-145-90-133-156 22 %  time ./program 41 x 
+Fibonacci number: 165580141
+./program 41 x  1.01s user 0.01s system 99% cpu 1.025 total
