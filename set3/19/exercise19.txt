@@ -219,6 +219,84 @@ int main() {
     ref = 100;  // Modifies the original value
 }
 
-16. 
+16. return a non-const reference to a std::string? 
 
-it is appropriate when you want to allow the caller of the function to modify the underlying string. similair to returining a non const reference to any other type this technique is useful when you want to provide direct acces to modify the internal or stored string.
+It is appropriate to use a non-const reference when you want to allow modifications to the referenced object from outside the function. In the code example, this is illustrated because the function returns a reference to a std::string, which can be modified directly through the reference.
+
+#include <iostream>
+#include <string>
+
+std::string& modifyString(std::string &s) {
+    return s;  // Return a non-const reference
+}
+
+int main() {
+    std::string str = "Hello";
+    modifyString(str) = "World";  // Directly modify the string via the reference
+    std::cout << str << std::endl;  // Outputs: World
+}
+
+17. return a const rvalue-reference to an int? 
+It is appropriate to use a const rvalue-reference to an int when you want to bind a temporary int to a reference that will be valid for the lifetime of the temporary. In the code example, this is illustrated because the function returns a const rvalue-reference to a temporary int created within the function.
+
+#include <iostream>
+
+const int&& getTemporaryInt() {
+    return 42;  // Returning a const rvalue-reference to a temporary int
+}
+
+int main() {
+    const int&& num = getTemporaryInt();
+    std::cout << num << std::endl;  // Outputs: 42
+}
+
+18. return a const rvalue-reference to a std::string? 
+
+It is appropriate to return a const rvalue-reference to a std::string when you want to return a temporary string that should not be modified. In the code example, this is illustrated because the function returns a const rvalue-reference to a temporary std::string object.
+
+#include <iostream>
+#include <string>
+
+const std::string&& getTemporaryString() {
+    return std::string("Temporary");  // Return a const rvalue-reference to a temporary string
+}
+
+int main() {
+    const std::string&& tempStr = getTemporaryString();
+    std::cout << tempStr << std::endl;  // Outputs: Temporary
+}
+
+19. return an rvalue-reference to an int? 
+
+It is appropriate to return an rvalue-reference to an int when you want to transfer ownership of a temporary int that can be modified. In the code example, this is illustrated because the function returns an rvalue-reference to a temporary int, and the caller can modify it.
+
+#include <iostream>
+
+int&& getTemporaryInt() {
+    int temp = 100;
+    return std::move(temp);  // Returning an rvalue-reference
+}
+
+int main() {
+    int&& tempInt = getTemporaryInt();
+    tempInt = 200;  // Modify the temporary int
+    std::cout << tempInt << std::endl;  // Outputs: 200
+}
+
+20. return an rvalue-reference to a std::string?
+
+It is appropriate to return an rvalue-reference to a std::string when you want to transfer ownership of a temporary std::string that can be modified. In the code example, this is illustrated because the function returns an rvalue-reference to a temporary std::string, and the caller can modify it.
+
+#include <iostream>
+#include <string>
+
+std::string&& getTemporaryString() {
+    std::string temp = "Temporary";
+    return std::move(temp);  // Returning an rvalue-reference to a string
+}
+
+int main() {
+    std::string&& tempStr = getTemporaryString();
+    tempStr = "New Value";  // Modify the temporary string
+    std::cout << tempStr << std::endl;  // Outputs: New Value
+}
