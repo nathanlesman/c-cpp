@@ -5,13 +5,13 @@ int main(int argc, char *argv[])
     if(argc == 1)
     {
         cerr << "Error: please provide a command-line argument.\n";
-        return 1;
+        return ERROR_INPUT;
     }
     
     if(stoul(argv[1]) > MAXFIB)
     {
         cerr << "Error: value too big to calculate.\n";    
-        return 1;
+        return ERROR_OUT_OF_RANGE;
     }
 
     cout << "Fibonacci number: "
@@ -22,4 +22,3 @@ int main(int argc, char *argv[])
         cout << "Golden ratio: " << golden_ratio(stoul(argv[1])) << "\n";
 
 }
-
