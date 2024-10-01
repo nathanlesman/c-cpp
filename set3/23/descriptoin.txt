@@ -1,3 +1,24 @@
 This advanced exercise is aimed at teaching the use of internal headers, scope management, and access control in a C/C++ project without using classes. It focuses on managing indentation depth in a console output through various functions (indented_cout, indent_more, indent_less, reset_indentation) while enforcing control over the global state (indentation depth) using static local variables, which ensures that only specific functions can modify it.
 
 The goal is to avoid exposing this global state to all parts of the program, which could lead to errors (e.g., incorrect indentation) and uncontrolled changes. This exercise also emphasizes using one function per source file to practice modular code organization, while the static library libindent.a is built from these source files.
+
+In this exercise, we implemented a library for managing indentation depth in console output using internal headers and functions to control scope and access. Here's a summary of what we did:
+
+    Created Functions:
+        Defined four functions (indented_cout, indent_more, indent_less, and reset_indentation) to control the depth of indentation, ensuring the output is consistently indented.
+        Added an additional function, step_size, to allow users to modify the indentation step size, but only before other functions are called.
+
+    Implemented Access Control:
+        Used a static local variable for indentation_depth to avoid exposing it as a global variable. This ensures that only the defined functions can modify the indentation depth, preventing accidental modifications from other parts of the program.
+
+    Maintained Modularity:
+        Followed the principle of one function per source file, creating separate source files for each function.
+        Included all functions in a header file (indent.h), along with internal headers for managing access control.
+
+    Compiled the Static Library:
+        Used commands to compile and link the code into a static library libindent.a, which can be reused without recompiling the entire codebase.
+
+    Answered Conceptual Questions:
+        Explained how access control works using static variables, why static locals are better than globals, and how the modular approach helps organize code. Also, described how the bulk of compiler work lies in handling multiple files, and how time can be saved through incremental compilation.
+
+These steps ensured a clean, modular design that prevents misuse of shared variables while maintaining efficient compilation practices.
