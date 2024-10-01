@@ -223,6 +223,7 @@ int main() {
 
 It is appropriate to use a non-const reference when you want to allow modifications to the referenced object from outside the function. In the code example, this is illustrated because the function returns a reference to a std::string, which can be modified directly through the reference.
 
+--- your code example here --
 #include <iostream>
 #include <string>
 
@@ -239,6 +240,8 @@ int main() {
 17. return a const rvalue-reference to an int? 
 It is appropriate to use a const rvalue-reference to an int when you want to bind a temporary int to a reference that will be valid for the lifetime of the temporary. In the code example, this is illustrated because the function returns a const rvalue-reference to a temporary int created within the function.
 
+--- your code example here --
+
 #include <iostream>
 
 const int&& getTemporaryInt() {
@@ -253,6 +256,8 @@ int main() {
 18. return a const rvalue-reference to a std::string? 
 
 It is appropriate to return a const rvalue-reference to a std::string when you want to return a temporary string that should not be modified. In the code example, this is illustrated because the function returns a const rvalue-reference to a temporary std::string object.
+
+--- your code example here --
 
 #include <iostream>
 #include <string>
@@ -270,6 +275,8 @@ int main() {
 
 It is appropriate to return an rvalue-reference to an int when you want to transfer ownership of a temporary int that can be modified. In the code example, this is illustrated because the function returns an rvalue-reference to a temporary int, and the caller can modify it.
 
+--- your code example here --
+
 #include <iostream>
 
 int&& getTemporaryInt() {
@@ -286,6 +293,8 @@ int main() {
 20. return an rvalue-reference to a std::string?
 
 It is appropriate to return an rvalue-reference to a std::string when you want to transfer ownership of a temporary std::string that can be modified. In the code example, this is illustrated because the function returns an rvalue-reference to a temporary std::string, and the caller can modify it.
+
+--- your code example here --
 
 #include <iostream>
 #include <string>
