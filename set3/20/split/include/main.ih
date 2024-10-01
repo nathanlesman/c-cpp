@@ -1,0 +1,11 @@
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+void processChar(int c, int &chars, int &words, int &lines, bool &in_word);
+void countText(int &chars, int &words, int &lines);
+void printResult(const std::string &arg, int lines, int words, int chars);
+void printLines(int lines);
+void printWords(int words);
+void printChars(int chars);
+
