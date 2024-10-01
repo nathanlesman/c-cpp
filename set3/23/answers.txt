@@ -1,0 +1,25 @@
+1. How does this acces control work?
+The acces control is this exercise is implemented by using static local variables within functions. Astatic local variable has "block scope" but lifetime until the program terminates. In this case the indentation depth and step size are stored as static local variables, making them accesible only within the functions that define them (indent_more, indent_less, reset_indentation and step_size). This ensures that no other part of the program can directly modify the indenation depth or step size, providing a form of access control without using classes. 
+The static local variables can onlny be modified through the provided functions, enforcing a controlled way of adjusting the indentatino state.
+
+2. What could the user do to circumvent this access control, without modifying the header file or library?
+The user could bypass the intended acces control by declaring and using their own global variables, possibly shadowing the static variables inside the library. Another way to circumvent acces control isby directly modifying the object code using external tools or by manipluating memory using (unsafe) techniques like pointer arithmetic or assembly level operations
+However since the static local variables are private to the functions direct access through ordinary cpp code, without resorting low-level techniques is not possible 
+
+3. A static local variable has a limited scope confined to the function in which it is declared, meaning it can only be accessed within that function. THis ensure that no other part of the program can accidentally modify the variable. A static global variable has program-wide scope within the file where it is declared, which exposes it to unintended modifications from other functions within the same file. Using a static local variable limits the scope of potential errors and provides more controlled access to the data.
+The static local variable is initialized only once and persists for the lifetime of the program, but its access is restricted to the function in which it is defined, making it safer than a global variable.
+
+4. Using a seperate source file for each function enforces "modular design" and "encapsulation". It ensures that the implementaion of each function is isolated, which makes the large codebase easier to debug, maintain and test. If changes are requited to one function, they won't affect the compilation of other functions. Additionally this design practice alligns with the one-function-one-file principle encouraging programmers to focus on the functionallity of each individual function
+Seperating functino into their own source files minimizes dependencices between them and makes the project easier to scale and maintain
+
+5. Havnig many source files causes extra work for the compiler. Wherein lies the bulk of this work?
+The bulk of the extra work for the compiler lies in compiling each source file into its corresponding object file. For every source file, the compiler must preprocess, parse and generate machine code, This overhead increases with the number of source file, as the compiler must repeat these steps for each file individually.
+Furthermore, the linking stage also incurs additional work because the linker must combine all the object files into the final binary or library resolving any external dependencies between them
+
+6. How do we help reduce the extra time that takes?
+One way to reduce the extra time involved in compiling multiple files is to use "incremental builds" with tools like "make" or "cmake". these tools track which source files have changed and only recompile the files that were modified, instead of recompiling the entire project. This drastically reduces the amount of work the compiler needs to do when making small changes.
+Another method is using "precompiled headers also known as included headers" to avoid redundant processing. 
+By only recompiling changed files, we minimize unnecessary compilation steps and make the build process faster
+
+7. Yes the library libident.a was created using the one-functino-per-source-file approach and incremental builds were utilized to minimize compilation time. You can verify this byb examining the makefile or the command line instructions used ot build the project. The make file or build script will show that each function was compiled seperately into an object file, and these objec files were then linked together into libident.a, the static library.
+By examining the build system (makefile) you can see how incremental compilatino and linking were achieved. You will also see how the object files were linked to create the final library
