@@ -1,0 +1,5 @@
+You can run the program with the following flags: -l to count lines, -w to count words or -c to count characters. 
+Input can be provided either thorugh manual typing or from a text file 
+
+You can also use a text file as input, to do this use the < symbol
+Example: ./main -l < text.txt
