@@ -1,7 +1,7 @@
-#include "calculator.h"  // Include the calculator header
+#include "calculator.h" 
 
 int main() {
-    calculator calc;  // Create an instance of the calculator
-    calc.run();       // Start the calculator
-    return 0;         // Return success
+    calculator calc;  
+    calc.run();       
+    return 0;         
 }
