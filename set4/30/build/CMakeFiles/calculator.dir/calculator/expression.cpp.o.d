@@ -1,7 +1,7 @@
 CMakeFiles/calculator.dir/calculator/expression.cpp.o: \
-  /Users/cassielu/documents/my\ program/set4/30/calculator/expression.cpp \
-  /Users/cassielu/documents/my\ program/set4/30/calculator/calculator.ih \
-  /Users/cassielu/documents/my\ program/set4/30/calculator/calculator.h \
+  /Users/cassielu/Documents/GitHub/c-cpp/set4/30/calculator/expression.cpp \
+  /Users/cassielu/Documents/GitHub/c-cpp/set4/30/calculator/calculator.ih \
+  /Users/cassielu/Documents/GitHub/c-cpp/set4/30/calculator/calculator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \

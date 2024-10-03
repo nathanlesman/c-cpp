@@ -1,6 +1,6 @@
 CMakeFiles/calculator.dir/main.cpp.o: \
-  /Users/cassielu/documents/my\ program/set4/30/main.cpp \
-  /Users/cassielu/documents/my\ program/set4/30/calculator/calculator.h \
+  /Users/cassielu/Documents/GitHub/c-cpp/set4/30/main.cpp \
+  /Users/cassielu/Documents/GitHub/c-cpp/set4/30/calculator/calculator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \

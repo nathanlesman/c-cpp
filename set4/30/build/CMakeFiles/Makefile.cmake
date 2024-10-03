@@ -105,7 +105,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.29/Modules/Platform/Darwin-Initialize.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.29/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.29/Modules/Platform/UnixPaths.cmake"
-  "/Users/cassielu/documents/my program/set4/30/CMakeLists.txt"
+  "/Users/cassielu/Documents/GitHub/c-cpp/set4/30/CMakeLists.txt"
   "CMakeFiles/3.29.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeSystem.cmake"
