@@ -1,6 +1,5 @@
 #include "calculator.ih"
-void calculator::run ()
-{     
+void calculator::run (){   
     do {
         cout << "? ";
         getline(cin, line);
