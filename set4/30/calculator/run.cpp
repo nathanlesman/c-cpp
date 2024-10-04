@@ -2,7 +2,6 @@
 void calculator::run ()
 {     
     do {
-        lh = rh = 0.0, op = '\0',intlh = intrh = false, line.clear();
         cout << "? ";
         getline(cin, line);
         if (!line.empty()) {

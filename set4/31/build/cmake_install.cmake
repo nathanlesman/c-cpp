@@ -1,4 +1,4 @@
-# Install script for directory: /Users/cassielu/Documents/GitHub/c-cpp/set4/30
+# Install script for directory: /Users/cassielu/documents/GitHub/c-cpp/set4/31
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/cassielu/Documents/GitHub/c-cpp/set4/30/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/cassielu/documents/GitHub/c-cpp/set4/31/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
