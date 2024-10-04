@@ -1,0 +1,22 @@
+1. Plain compilation time of the program
+using the build utility icmbuild the time was 3:11
+
+2. Time using precompiled headers
+
+- The sizes in MB are:
+
+- Total size of the precompiled headers:
+
+
+3. Compilation tiem using a single precompiled header (SPCH)
+
+- Size of the SPCH is xx MB
+
+4. Compilation time of the program using a SPCH and using all CPUs of my computer 
+
+
+5. New compilation time after removing compilation results of the previous items
+
+
+6. The conclusions that you can draw:
+- 

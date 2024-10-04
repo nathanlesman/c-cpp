@@ -1,0 +1,4 @@
+We do not need  to define a constructor for the class Calculator,
+because it doesn't have any member variables that require initialization.
+The input is from cin
+  
