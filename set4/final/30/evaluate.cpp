@@ -1,8 +1,8 @@
 #include "calculator.ih"
 
-void Calculator::evaluate(double lh, char op, double rh)
+void Calculator::evaluate()
 {
-    if (((rh == 0 ) && ((op == '/') ||(op == '%'))) ||
+    if (((d_rnumber == 0 ) && ((d_operation == '/') ||(op == '%'))) ||
                 ((op == '%') && (lh < 0 || rh < 0 || intlh || intrh)))
         cout << "false" << "\n"; 
 
