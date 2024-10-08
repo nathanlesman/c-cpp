@@ -1,0 +1,1 @@
+We implement the class "Person" as discussed in the C++ Annotations with additional functions "insert" and "extract," which insert information about a certain person into a wanted ostream, and extract information about a person from an input file, respectively.
