@@ -7,10 +7,10 @@
 // ES: consider enums
 class Calculator
 {
-    char        d_operation;          // operator as a character
     std::string d_str_operation;      // operator as a string
     std::string d_line;               // entire operation 
     double      d_lnumber, d_rnumber; // left and right number in operation
+    size_t      d_first_space, d_second_space; // location of first and second space
 
     bool        d_lint, d_rint;       // bool value that lets us know
                                       // whether the left and right numbers 
