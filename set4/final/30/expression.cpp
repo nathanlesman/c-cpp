@@ -2,8 +2,7 @@
 
 bool Calculator::expression(string &line)
 {
-    d_first_space = line.find (" ");
-    d_second_space = line.find(" ", first_space + 1);
+    getSpaces(line)
 
     if (d_first_space == string::npos || d_second_space == string::npos)
         return false;
