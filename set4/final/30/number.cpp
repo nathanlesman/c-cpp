@@ -6,7 +6,7 @@ bool Calculator::number(double *dest, bool *isInt)
             *dest = 0;
         
         if (*isInt)
-            *dest = static_cast<int>(*dest);
+            *dest = static_cast<double>(*dest);
         
         return true;
 } 
