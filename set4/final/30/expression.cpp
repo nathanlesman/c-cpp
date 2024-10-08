@@ -5,7 +5,7 @@ bool Calculator::expression(string &line)
     d_first_space = line.find (" ");
     d_second_space = line.find(" ", first_space + 1);
 
-    if (first_space == string::npos || second_space == string::npos)
+    if (d_first_space == string::npos || d_second_space == string::npos)
         return false;
 
     string str_lnumber = line.substr(0, first_space)
