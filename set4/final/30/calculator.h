@@ -16,6 +16,7 @@ class Calculator
                                       // whether the left and right numbers 
                                       // are integers
 
+    void getSpaces(string &line)
     bool number(double *dest, bool *isInt);
     bool expression(std::string &line);
     bool getOperator(const std::string &str_operation);
