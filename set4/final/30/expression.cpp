@@ -18,7 +18,7 @@ bool Calculator::expression(string &line)
     d_str_operation = line.substr(first_space + 1, second_space - first_space - 1);
     d_rnumber = stod(str_rnumber);
     
-    if (getOperator(ope)&& number(&lh, &intlh) && number (&rh, &intrh))
+    if (getOperator(d_str_operation) && number(&d_lnumber, &d_lint) && number (&d_rnumber, &d_rint))
         return true;
     
     else
