@@ -9,7 +9,7 @@ bool Calculator::expression(string &line)
         return false;
     
     d_lnumber = stod(line.substr(0, first_space));
-    d_str_operation = line.substr(first_space + 1, second_space - first_space - 1);
+    d_str_operation = line.substr(first_space + 1, 1);
     d_rnumber = stod(line.substr(second_space + 1));
 
     intlh = (floor(lh) == lh);
