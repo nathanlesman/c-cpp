@@ -1,0 +1,8 @@
+#include "../26/person.hh"
+#include <iostream>
+
+using namespace std;
+
+void extractArray(Person people[], size_t size);
+void insertArray(Person people[], size_t size);
+

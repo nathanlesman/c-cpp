@@ -1,0 +1,5 @@
+sum.txt
+main.ih
+main.cc
+extractArray.cc
+insertArray.cc

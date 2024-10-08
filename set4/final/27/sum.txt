@@ -1,0 +1,1 @@
+We create a function that uses the class Person that we defined in exercise 26. Note that we can use the previously defined functions insert and extract. 
