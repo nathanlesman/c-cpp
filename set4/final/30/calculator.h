@@ -16,11 +16,12 @@ class Calculator
                                       // whether the left and right numbers 
                                       // are integers
 
-    void getSpaces(string &line)
+    void getSpaces();
+    void parseExpression();
     bool number(double *dest, bool *isInt);
-    bool expression(std::string &line);
-    bool getOperator(const std::string &str_operation);
-    void evaluate(double lnumber, char operation, double rnumber);
+    bool expression();
+    bool getOperator();
+    void evaluate();
     
     public:
         void run();
