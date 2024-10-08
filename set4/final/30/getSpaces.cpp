@@ -1,4 +1,4 @@
-#include "calculator.h"
+#include "calculator.ih"
 
 void getSpaces(string &line)
 {
