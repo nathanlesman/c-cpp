@@ -1,0 +1,12 @@
+sum.txt
+calculator.h
+calculator.ih
+number.cpp
+expression.cpp
+getOperator.cpp
+evaluate.cpp
+evaluate2.cpp
+evaluate3.cpp
+evaluate4.cpp
+run.cpp
+descr.txt

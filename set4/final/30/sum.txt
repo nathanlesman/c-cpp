@@ -1,0 +1,1 @@
+We design the class Calculator which an add, subtract, divide and multiply two values, or compute their modulo if they are positive integral values. 
