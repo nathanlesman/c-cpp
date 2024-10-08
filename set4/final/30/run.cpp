@@ -6,7 +6,7 @@ void Calculator::run()
     
     while(getline(cin, d_line)) 
     {    
-        if (expression(d_line)) 
+        if (expression()) 
         {
             evaluate()
             cout << "? ";
