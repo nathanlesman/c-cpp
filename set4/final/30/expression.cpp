@@ -7,13 +7,16 @@ bool Calculator::expression(string &line)
 
     if (first_space == string::npos || second_space == string::npos)
         return false;
-    
-    d_lnumber = stod(line.substr(0, first_space));
-    d_str_operation = line.substr(first_space + 1, 1);
-    d_rnumber = stod(line.substr(second_space + 1));
 
-    intlh = (floor(lh) == lh);
-    intrh = (floor(rh) == rh);
+    string str_lnumber = line.substr(0, first_space)
+    string str_rnumber = line.substr(second_space + 1)
+    
+    d_lint = (str_lnumber.find(".") != string::npos)
+    d_rint = (str_rnumber.find(".") != string::npos)
+    
+    d_lnumber = stod(str_lnumber);
+    d_str_operation = line.substr(first_space + 1, second_space - first_space - 1);
+    d_rnumber = stod(str_rnumber);
     
     if (getOperator(ope)&& number(&lh, &intlh) && number (&rh, &intrh))
         return true;
