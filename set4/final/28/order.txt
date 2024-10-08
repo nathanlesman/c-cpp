@@ -1,0 +1,6 @@
+sum.txt
+line.h
+line.ih
+Line.cc
+getLine.cc
+next.cc

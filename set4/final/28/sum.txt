@@ -1,0 +1,1 @@
+We create a class Line, which contains functions getLine and next, which tell us if a line contains only non-ws characters and returns the next substring that has no ws characters. 
