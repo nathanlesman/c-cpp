@@ -2,28 +2,28 @@
 
 void Calculator::evaluate()
 {
-    if (((d_rnumber == 0 ) && ((d_operation == '/') ||(op == '%'))) ||
-                ((op == '%') && (lh < 0 || rh < 0 || intlh || intrh)))
+    if (((d_rnumber == 0 ) && ((d_str_operation == '/') ||(d_str_operation == '%'))) ||
+                ((d_str_operation == '%') && (d_lnumber < 0 || d_rnumber < 0 || d_lint || d_rint)))
         cout << "false" << "\n"; 
 
     else    
     {  
-        switch (op)
+        switch (d_str_operation)
         {
             case '+':
-                cout << lh + rh << "\n"; 
+                cout << d_lnumber + d_rnumber << "\n"; 
             break;
             case '-': 
-                cout << lh - rh << "\n";  
+                cout << d_lnumber - d_rnumber << "\n";  
             break;
             case '*': 
-                cout << lh * rh << "\n"; 
+                cout << d_lnumber * d_rnumber << "\n"; 
             break;
             case '/': 
-                cout << lh / rh << "\n"; 
+                cout << d_lnumber / d_rnumber << "\n"; 
             break;
             case '%': 
-                cout << fmod(lh,rh) <<"\n"; 
+                cout << d_lnumber % d_rnumber <<"\n"; 
             break;
         }
     }        
