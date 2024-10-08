@@ -1,7 +1,7 @@
 #include "calculator.ih"
 
-void getSpaces(string &line)
+void getSpaces()
 {
-    d_first_space = line.find (" ");
-    d_second_space = line.find(" ", first_space + 1);
+    d_first_space = d_line.find (" ");
+    d_second_space = d_line.find(" ", first_space + 1);
 }
