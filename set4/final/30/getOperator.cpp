@@ -1,8 +1,8 @@
 #include "calculator.ih"
 
-bool Calculator::getOperator(const string &str_operation)
+bool Calculator::getOperator()
 {
-    if(str_operation.length() == 1 && (ope[0] == '+' || ope[0] == '-' || 
+    if(d_str_operation.length() == 1 && (ope[0] == '+' || ope[0] == '-' || 
                              ope[0] == '*' || ope[0] == '/' || 
                              ope[0] == '%'))
         return true;
