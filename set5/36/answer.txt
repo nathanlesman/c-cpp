@@ -1,0 +1,63 @@
+definition:
+int x[8];
+
+rewritten pointer expression:
+*(x + 2) = *(x + 3);
+
+semantics:
+Set the value of the 2nd element to the value of the 3rd element.
+
+definition:
+char *argv[8];
+
+rewritten pointer expression:
+cout << *(argv + 2);
+
+senantics:
+Print the string pointed to by the 3rd element of argv.
+
+definition:
+int x[8];
+
+rewritten pointer expression:
+(&x[10] - &x[3]);
+
+semantics:
+Compute the number of elements between the 4th and the 11th element in x.
+
+definition:
+main's argv;
+
+rewritten pointer expression:
+(*argv)++;
+
+semantics:
+Increment the pointer argv[0], so that it points to the next character of the first string.
+
+definition:
+main's argv;
+
+rewritten pointer expression
+(*argv)++;
+
+semantics:
+Move the pointer argv to the next argument in the array.
+
+definition:
+main's argv;
+
+rewritten pointer expression:
+++(*argv);
+
+semantics:
+Increment the pointer argv[0], so it points to the next character of the first string.
+
+definition:
+main's argv;
+
+rewritten pointer statement:
+++(*(*(argv + 0) + 2));
+
+semantics:
+Increment the character at index 2 of the first argument in argv.
+
