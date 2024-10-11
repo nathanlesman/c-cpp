@@ -1,0 +1,19 @@
+The problem lies in the initialization order of global and static objects across different source files. The PhoneBook class uses a static Finder object, but since PhoneBook is defined globally, there'sa risk that s_finder is not initialized when PhoneBook tries to use it. This leads to undefined behavior.
+
+class PhoneBook {
+    static Finder* s_finder;
+    static Finder* getFinder() {
+        if (!s_finder)
+            s_finder = new Finder();
+        return s_finder;
+    }
+public:
+    void insert(std::string const &name, std::string const &phone) {
+        getFinder()->insert(name, phone);
+    }
+    std::string const *get(std::string const &name) const {
+        return getFinder()->get(name);
+    }
+};
+
+This ensures Finder is initialized only when needed, regardless of the initialization order.
