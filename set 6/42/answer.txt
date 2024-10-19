@@ -9,7 +9,8 @@ delete[] intarr
 
 3. The placement new and delete operator The placement new is passed an existing block of memory into which new initializs an object or value. A requirement is that the block of memory should be large enough to contain the object. If you want to use the placement new, the <memory> header file must be included. 
 Example:
-int main() {
+int main() 
+{
     // Create a buffer of sufficient size to hold an int
     char buffer[sizeof(int)];
 
@@ -21,7 +22,6 @@ int main() {
 
     // Manually call the destructor since delete cannot be used with placement new
     number->~int();
-
 }
 
  
