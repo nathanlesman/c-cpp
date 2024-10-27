@@ -1,0 +1,18 @@
+The issue occurs because when opening a fstream, you need to specify the open mode explicitly. By default, fstream opens in input mode (ios::in) only
+ofstream automatically opens in output mode (ios::out)
+This is why out1 (ofstream) successfully creates and writes to the file and  out2 (fstream) fails to create or write to the file since it's not opened in output mode
+
+corrected program is called corrected_program.cc
+
+The key differences:
+ofstream: is specifically designed for output
+Opens files in output mode by default
+Will create the file if it doesn't exist
+Perfect for write-only operations
+fstream: is designed for both input and output
+Opens in input mode (ios::in) by default
+Must explicitly specify output mode (ios::out) if you want to write
+Can combine modes like ios::in | ios::out for both reading and writing
+By adding ios::out to the fstream constructor, we tell it to open the file in output mode, allowing the write operation to succeed and create the file if it doesn't exist.
+This is a common source of confusion because ofstream and fstream have different default behaviors despite both being capable of writing to files.
+
