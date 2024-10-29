@@ -15,6 +15,4 @@ int main()
     // Fix: Open fstream with explicit output mode
     fstream out2{ "/tmp/out2", ios::out };  // Added ios::out
     hello(out2);
-
-    return 0;
 }
