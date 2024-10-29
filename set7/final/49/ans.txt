@@ -1,0 +1,23 @@
+Version 1:
+time ./a.out 100000000
+
+real    0m2.652s
+user    0m2.658s
+sys     0m0.001s
+
+Version 2:
+time ./a.out 100000000
+
+real    0m0.248s
+user    0m0.237s
+sys     0m0.001s
+
+Version without if-check:
+Even though the failbit is set, the program still attempts to format the output string. It still performs string construction and tries to write to the stream. All stream operations are prepared and processed, only to be discarded at the final step. These operations consume CPU cycles despite producing no output.
+
+Version with if-check:
+The if-statement quickly checks the stream state first. When it sees the failbit is set, it completely skips all output operations. No string formatting or stream operations are performed. Only a simple boolean check is executed per iteration.
+
+Rule of thumb:
+"Always check stream state before performing expensive stream operations, especially in loops or frequent operations. The cost of a simple boolean check (if-statement) is significantly lower than preparing and attempting failed stream operations."
+To put it in perspective, the version with the if-check might run multiple times faster than the version without it when dealing with a very large number of iterations, as it eliminates all the unnecessary stream processing overhead.

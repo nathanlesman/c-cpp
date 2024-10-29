@@ -1,0 +1,1 @@
+We create two versions of a program in order to compare the performance of generating a large number of debug output with and without checking the stream first. 
