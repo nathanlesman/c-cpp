@@ -1,0 +1,5 @@
+(without aka phrase)
+
+error: invalid conversion from 'string ***' to 'string const ***'
+    p3 = pPtr;
+

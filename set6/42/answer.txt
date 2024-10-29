@@ -1,0 +1,28 @@
+1. Basic new and delete. Both are used to dynamically allocate memory. The new operator denotes a request for memory allocatoin on the Free Store. Delete is used to deallocate memory for a single object.
+
+example an int pointer variable points to memory allocated by the operator new then after delete is used to release the memory
+int *number = new int;
+delete number
+
+2. Operator new[] and delete[] to dynamically delete and allocate arrays. Example when you want to allocate and delete an array of 20 integers int *intarr[20] =new int[20] 
+delete[] intarr
+
+3. The placement new and delete operator The placement new is passed an existing block of memory into which new initializs an object or value. A requirement is that the block of memory should be large enough to contain the object. If you want to use the placement new, the <memory> header file must be included. 
+Example:
+int main() {
+    // Create a buffer of sufficient size to hold an int
+    char buffer[sizeof(int)];
+
+    // Use placement new to construct an int in the buffer
+    int* number = new (buffer) int(42);
+
+    // Access and print the value of the int constructed in the buffer
+    std::cout << "Value: " << *number << std::endl;
+
+    // Manually call the destructor since delete cannot be used with placement new
+    number->~int();
+
+}
+
+ 
+
